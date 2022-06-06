@@ -1,0 +1,38 @@
+{% extends 'LoginSystem/main.html' %} 
+{% load static %}
+{% block content %}
+
+
+
+<section class="home-landing d-flex flex-column justify-content-center align-items-center" >
+    <div class="container row ">
+        <div class="home-landing-text col-lg-8 col-sm-12 d-flex flex-column justify-content-center ">            
+            <h1 class="home-landing-main">PasswordSecurity</h1>
+            <h3 class="home-landing-sub">Sign In</h3>
+        </div>
+        <div class="col-lg-4  col-sm-12 d-flex flex-column justify-content-center">                        
+            <div class="landing-card d-flex flex-column justify-content-center align-items-center text-center">
+                
+                {% for message in messages %} 
+                    <p id="messages">{{message}}</p>
+                {% endfor %}
+                <form class="form my-1 d-flex flex-column justify-content-center align-items-center" method ="POST">  
+                    {% csrf_token %}
+                    <input type="text" id="username"  name="username" placeholder="Username">
+                    <input type="password" id="password" name="password" placeholder="Password">  
+                    <br>
+                      <div class="g-recaptcha" data-sitekey="6LdL6i4gAAAAAIMgbff9QVKyUm8vpF93bzA9pJUn"></div>
+                    <button class="btn btn-success" type="submit"  id="login" value="Sign In">Sign In</button>   
+                </form>
+                      
+                
+                <a href="{% url 'register' %}">Dont have an account? Sign Up.</a>
+                
+            </div>                      
+        </div>            
+    </div>
+           
+</section>
+
+
+{% endblock %}

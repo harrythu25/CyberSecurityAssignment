@@ -1,0 +1,57 @@
+<section class="d-flex flex-column align-items-center justify-content-center text-center" id="evaluate-container">
+   
+        <form class="password-test-form">
+            <input type="text" id="pasword-to-test" placeholder="Enter a password">
+            <h3> Estimated number of attempts to crack (log <sub>10</sub>): </h3> <span id="result-attempts">-</span>
+            <h3> Total Possible Combinations (log <sub>10</sub>): </h3><span id="total-possible">-</span>
+            <h3> Strength Score: </h3> <span id="result-score">-</span>
+            <h3> Warning: </h3> <span id="result-warning">-</span>          
+        </form>
+        <ul class="my-3 px-0">
+            <h3>Requirements Checklist</h3>
+            <li class="my-1" id="no-lowercase">
+                <i class="fa-regular fa-circle-check"></i> 
+                Lowercase Letters
+            </li>
+            <li class="my-1" id="yes-lowercase">
+                <i class="fa-solid fa-circle-check"></i> 
+                Lowercase Letters
+            </li>
+
+            <li class="my-1"id="no-uppercase">
+                <i class="fa-regular fa-circle-check"></i> 
+                Uppercase Letters
+            </li>
+            <li class="my-1"id="yes-uppercase">
+                <i class="fa-solid fa-circle-check"></i> 
+                Uppercase Letters
+            </li>
+
+            <li class="my-1" id="no-numeric">
+                <i class="fa-regular fa-circle-check"></i> 
+                Numeric 
+            </li>
+            <li class="my-1" id="yes-numeric">
+                <i class="fa-solid fa-circle-check"></i> 
+                Numeric Letters
+            </li>
+
+            <li class="my-1" id="no-special">
+                <i class="fa-regular fa-circle-check"></i> 
+                Special Character
+            </li>
+            <li class="my-1" id="yes-special">
+                <i class="fa-solid fa-circle-check"></i> 
+                Special Character
+            </li>
+        </ul>
+        <p class="my-3 note" id="explaination">
+            Estimated number of attempts is based on log<sub>10</sub>. For example, if it takes 1000 attempts, the display would show 3, log(1000)=3. 
+            To find the exact value, this can be reversed by putting 10<sup>x</sup> where x = display value. 
+        </p>
+        <p class="my-3 note" id="explaination">
+            Strength score is on a scale of 0-4. However, it does not determine the absolute security of the password. Ensure you include all requirements for a secure password.
+        </p>
+
+
+</section>

@@ -1,0 +1,67 @@
+{% extends 'LoginSystem/main.html' %} 
+
+{% block content %}
+
+<style></style>
+
+<section class="home-landing d-flex flex-column justify-content-center align-items-center" id="register-landing">
+    <div class="container row ">
+        <div class="home-landing-text col-lg-8 col-sm-12 d-flex flex-column justify-content-center ">            
+            <h1 class="home-landing-main">PasswordSecurity</h1>
+            <h3 class="home-landing-sub">Create an account</h3>
+        </div>
+        <div class="col-lg-4  col-sm-12 d-flex flex-column justify-content-center">                        
+            <div class="landing-card d-flex flex-column justify-content-center align-items-center text-center">
+                
+                <form class="form d-flex flex-column justify-content-center align-items-center" method ="POST">  
+                    {% csrf_token %}                  
+                    {{form.first_name}}
+                    {{form.last_name}}
+                    {{form.username}}                    
+                    {{form.email}}                    
+                    {{form.password1}}                    
+                    {{form.password2}} 
+
+                    {% for field, error in form.errors.items %}
+                        {% if field != '__all__' %}{{ field }}{% endif %}
+                        {{ error | striptags }}
+                    {% endfor %}
+                    <br>
+                    <div class="g-recaptcha" data-sitekey="6LdL6i4gAAAAAIMgbff9QVKyUm8vpF93bzA9pJUn"></div>
+
+                    <button class="btn btn-success" type="submit"  id="btnSignUp" name="Create User" >Sign Up</button>
+                    {% for message in messages %} 
+                        <p id="messages">{{message}}</p>
+                    {% endfor %}
+
+                    
+                </form>
+                   
+                    <a href="{% url 'login' %}">Already have an account? Sign In.</a>
+                    
+
+                    <!--<input type="text" id="fullname" name="fullname" placeholder="Full Name">
+                    <input type="text" id="username" name="username" placeholder="Username">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="submit" id="btnSignUp" value="Sign Up">
+                </form>
+                -->
+                
+            </div>                      
+        </div>            
+    </div>
+           
+</section>
+	<script>			
+		var form_fields = document.getElementsByTagName('input')
+        form_fields[0].placeholder='test';
+		form_fields[1].placeholder='First Name';
+		form_fields[2].placeholder='Last Name';
+        form_fields[3].placeholder='Username';
+		form_fields[4].placeholder='Email';
+		form_fields[5].placeholder='Password';
+        form_fields[6].placeholder='Re-enter Password';		
+	</script>
+
+{% endblock %}

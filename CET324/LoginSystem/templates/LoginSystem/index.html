@@ -1,0 +1,22 @@
+{% extends 'LoginSystem/main.html' %} 
+{% load static %}
+
+{% block content %}
+<section class=" home-landing ">
+    <div class="container row" id="sec1">
+        <div class="home-landing-text  d-flex flex-column justify-content-center ">            
+            <h1 class="home-landing-main">Password Strength </h1>
+            <h3 class="home-landing-sub">Test your password strength now.</h3>
+            <a href="#evaluate-container"><i class="fa-solid fa-angles-down fa-3x"></i></a>
+        </div>
+    </div> 
+     
+           
+</section>
+{% include 'LoginSystem/evaluate.html' %}
+
+
+
+
+{% endblock %}
+
