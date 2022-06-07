@@ -27,7 +27,7 @@ Note the IP address and the port and enter it in a browser.
 # Credits
 Special thanks to [zxcvbn](https://github.com/dropbox/zxcvbn), a Javascript library developed by Dropbox. This library was used to evaluate the strength of the passwrod. 
 
-And [This blog](https://www.ocpsoft.org/tutorials/regular-expressions/password-regular-expression/) which helped me get through the headachhe of writing regex. 
+And [this blog](https://www.ocpsoft.org/tutorials/regular-expressions/password-regular-expression/) which helped me get through the headache of writing regex. 
 
 # License & Copyright
 
