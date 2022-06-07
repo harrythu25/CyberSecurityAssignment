@@ -8,11 +8,13 @@ Django, a python-based web framework used to create a web app with security in m
 # Requirements and  python libraries 
 Python 3.9 or below
 
-Requests
+[Requests](https://pypi.org/project/requests/)
 
-Urlllib
+[Urlllib](https://docs.python.org/3/library/urllib.html)
 
-Python-Decouple
+[Python-Decouple](https://pypi.org/project/python-decouple/)
+
+[django-axes](https://django-axes.readthedocs.io/en/latest/index.html)
 
 # How to Run
 First navigate a terminal to the root directory and execute the following command to set up a virtual environment
