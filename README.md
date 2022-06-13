@@ -10,7 +10,7 @@ Python 3.9 or below
 
 [Requests](https://pypi.org/project/requests/)
 
-[Urlllib](https://docs.python.org/3/library/urllib.html)
+[Urllib](https://docs.python.org/3/library/urllib.html)
 
 [Python-Decouple](https://pypi.org/project/python-decouple/)
 
@@ -26,6 +26,10 @@ Next enter the Django project folder and execute the following command to run th
 python manage.py runserver
 ```
 Note the IP address and the port and enter it in a browser. 
+If there is an error regarding argon2, try reinstalling it with the following comnmand
+```
+python -m pip install django[argon2]
+```
 # Credits
 Special thanks to [zxcvbn](https://github.com/dropbox/zxcvbn), a Javascript library developed by Dropbox. This library was used to evaluate the strength of the passwrod. 
 
